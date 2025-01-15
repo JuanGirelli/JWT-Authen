@@ -20,15 +20,15 @@ const Login = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const data = await login(loginData);
-      Auth.login(data.token);
-    } catch (err) {
+      const data: any = await login(loginData);
+      if (data && data.token) Auth.login(data.token);
+    } catch (err) { 
       console.error('Failed to login', err);
     }
   };
 
   return (
-    <div className='container'>
+    <div className='form-container'>
       <form className='form' onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label >Username</label>
@@ -45,7 +45,7 @@ const Login = () => {
           value={loginData.password || ''}
           onChange={handleChange}
         />
-        <button type='submit'>Submit Form</button>
+        <button type='submit'>Login</button>
       </form>
     </div>
     
