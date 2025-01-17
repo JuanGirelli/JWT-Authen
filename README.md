@@ -3,11 +3,15 @@
 ## **Description**
 This project implements a JSON Web Token (JWT)-based authentication system using Node.js, Express, and PostgreSQL. It provides secure routes for user registration, login, and access to protected resources. The project includes a robust database structure and seed files to populate initial data for testing and development.
 
-![Home Page Screenshot](./Develop/assets/Home.png)
+![Home Page Screenshot](./assets/HomePage.png)
 
-![Home Page Screenshot](./Develop/assets/Home.png)
+![Login Page Screenshot](./assets/Login.png)
 
-![Home Page Screenshot](./Develop/assets/Home.png)
+![Tickets Page Screenshot](./assets/Tickets.png)
+
+![Edit Tickets Page Screenshot](./assets/EditTicket.png)
+
+![Create Tickets Page Screenshot](./assets/CreateTicket.png)
 
 ---
 
@@ -20,6 +24,7 @@ This project implements a JSON Web Token (JWT)-based authentication system using
 - [Database Schema](#database-schema)
 - [Seeds](#seeds)
 - [API Endpoints](#api-endpoints)
+- [DeployWeb](#depolyweb)
 - [License](#license)
 
 ---
@@ -140,7 +145,8 @@ This project implements a JSON Web Token (JWT)-based authentication system using
 
 	•	assignedUserId (Foreign Key referencing Users.id)
 
-    ---
+
+---
 ## **Seeds**
 
 •**User Seeds**:
@@ -164,7 +170,7 @@ await Ticket.bulkCreate([
 ]);
 ```
 
-    ---
+ ---
 ## **API Endpoint**
 
 **User Authentication**
@@ -193,7 +199,14 @@ await Ticket.bulkCreate([
 
 	•	Required fields: name, status, description.
 
-    ---
+
+---
+## **DeployWeb**
+
+Render Live Web Site: https://jwt-authen.onrender.com
+
+
+---
 ## **License**
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
